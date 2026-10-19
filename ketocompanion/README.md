@@ -14,6 +14,8 @@ npm run build      # type-check + production build to dist/
 npm run preview    # serve the production build
 ```
 
+To make a single self-contained HTML page (used for the private claude.ai link), run `npm run build:artifact`, which writes `dist-artifact/ketocompanion.html`. That build keeps navigation in memory and hides the print button, because the claude.ai viewer blocks the print dialog.
+
 Requires Node 18+. The build uses a relative base path, so `dist/` can be hosted from any sub-folder (for example GitHub Pages at `/ketocompanion/`).
 
 ## Design principles

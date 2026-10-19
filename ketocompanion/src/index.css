@@ -23,6 +23,16 @@
   }
 }
 
+/* Paint the band above the sticky header when the page runs under a phone's status bar. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 40;
+  background: #1f2933;
+}
+
 /* Recharts: keep focus outlines tidy inside SVG */
 .recharts-surface:focus {
   outline: none;

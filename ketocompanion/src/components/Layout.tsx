@@ -25,7 +25,7 @@ export function Layout({ route, children }: { route: Route; children: ReactNode 
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2">
         Skip to content
       </a>
-      <div className="sticky top-0 z-30 print:static">
+      <div className="sticky top-[env(safe-area-inset-top,0px)] z-30 print:static">
         <DemoBanner />
         <header className="border-b border-stone-200 bg-canvas/95 backdrop-blur print:hidden">
           <div className="mx-auto flex h-14 max-w-2xl items-center justify-between px-4">

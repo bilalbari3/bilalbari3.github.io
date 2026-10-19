@@ -106,10 +106,15 @@ export function SummaryScreen() {
               { value: '30', label: 'Last 30 days' },
             ]}
           />
-          <Button onClick={() => window.print()} className="shrink-0">
-            <PrintIcon size={20} /> Print or save PDF
-          </Button>
+          {import.meta.env.VITE_ARTIFACT === '1' ? null : (
+            <Button onClick={() => window.print()} className="shrink-0">
+              <PrintIcon size={20} /> Print or save PDF
+            </Button>
+          )}
         </div>
+        {import.meta.env.VITE_ARTIFACT === '1' && (
+          <p className="text-sm text-ink-muted">You can show this page on screen. To print it, run the app in a regular browser.</p>
+        )}
       </div>
 
       <article
